@@ -49,3 +49,15 @@ init([]) ->
 echo(Msg) ->
     python_port:call_port(?MODULE, {echo, Msg}).
 ```
+
+See [examples](https://github.com/gar1t/python_port/tree/master/examples) for
+more examples.
+
+To play around with examples, use "make shell". For example:
+
+```
+$ cd examples
+$ make shell
+1> {ok, A} = arith:start_link().
+2> 3 = arith:add(A, 1, 2).
+```
